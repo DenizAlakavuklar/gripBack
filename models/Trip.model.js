@@ -27,7 +27,9 @@ const tripSchema = new Schema(
 
   dateDescription: String,
 
-  attendees: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }]
+  attendees: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }], 
+  createdBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }
+  
 },
 
 {
