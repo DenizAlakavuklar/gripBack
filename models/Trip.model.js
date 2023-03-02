@@ -10,7 +10,6 @@ const tripSchema = new Schema(
 
   image: {
     type: String,
-    required: true,
     default: "https://unsplash.com/photos/jzY0KRJopEI"
   },
 

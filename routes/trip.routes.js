@@ -18,7 +18,16 @@ router.post('/trips', async (req, res) => {
 
   
 // Endpoints for reading a trip
-router.get('/trips/:tripId', async (req, res, next) => {
+
+
+    router.get('/trips/alltrips', async (req, res, next) => {
+        // Get all trips
+        const allTrips = await Trip.find()
+        res.json(allTrips)
+      })
+
+
+      router.get('/trips/:tripId', async (req, res, next) => {
         const { tripId } = req.params
         try {
           // Get one trip
@@ -29,13 +38,7 @@ router.get('/trips/:tripId', async (req, res, next) => {
         }
       }
     );
-
-    router.get('/trips/alltrips', async (req, res, next) => {
-        // Get all trips
-        const allTrips = await Trip.find()
-        res.json(allTrips)
-      })
-
+    
 
   //Updating a trip:
   router.put('/trips/:tripId', async (req, res) => {
