@@ -24,12 +24,12 @@ router.post('/signup', async (req, res, next) => {
       res.status(400).json({ message: 'Provide a valid email address.' });
       return;
     }
-      // Use regex to validate the password format
-  const passwordRegex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
-  if (!passwordRegex.test(req.body.password)) {
-    res.status(400).json({ message: 'Password must have at least 6 characters and contain at least one number, one lowercase and one uppercase letter.' });
-    return;
-  }
+// Use regex to validate the password format
+const passwordRegex = /[0-9a-zA-Z]{4,}/;
+if (!passwordRegex.test(req.body.password)) {
+  res.status(400).json({ message: 'Password must have at least 4 characters and contain letters or numbers.' });
+  return;
+}
     await User.create({ username: username, email: email, passwordHash: passwordHash });
     res.status(201).json({ message: "User created successfully" });
   } catch (error) {
