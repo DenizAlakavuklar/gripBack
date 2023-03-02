@@ -1,4 +1,5 @@
 const { Schema, model } = require("mongoose");
+const mongoose = require('mongoose');
 
 // TODO: Please make sure you edit the User model to whatever makes sense in this case
 const proposalSchema = new Schema(
@@ -7,7 +8,11 @@ const proposalSchema = new Schema(
       type: String,
       required: true,
     },
-
+    image: {
+      type: String,
+      required: true,
+      default: "https://www.traveloffpath.com/wp-content/uploads/2022/03/road-trip.jpg"
+    },
     location: {
       type: String,
       required: true
@@ -15,7 +20,8 @@ const proposalSchema = new Schema(
 
     type: {
       type: String,
-      required: enum ['AirBnB', 'Camping', 'Crash at a friends', 'Hotel', 'Serviced Apartment']
+      required: true,
+      enum: ['AirBnB', 'Camping', 'Crash at a friends', 'Hotel', 'Serviced Apartment']
     }, 
 
     totalPrice: {
@@ -36,15 +42,15 @@ const proposalSchema = new Schema(
     }, 
 
     trip: {
-      type: Schema.Types.ObjectId,
-      ref: Trip,
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Trip',
     }, 
 
     votes: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }], 
 
     createdBy: {
       type: Schema.Types.ObjectId,
-      ref: User,
+      ref: 'User',
     }
     
   },
