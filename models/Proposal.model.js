@@ -31,6 +31,9 @@ const proposalSchema = new Schema(
       type: String,
       required: true
     }, 
+    link2: {
+      type: String
+    }, 
 
     trip: {
       type: Schema.Types.ObjectId,
