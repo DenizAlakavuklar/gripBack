@@ -55,7 +55,7 @@ const tripsArr = [{
         "budget": "budget",
         "location": "Porto",
         "dateDescription": "Long weekend in March - Any weekend is fine!",
-        "attendees": ["64007c196fbd729d9f22f19d", "64007c216fbd729d9f22f19f"],
+        "attendees": ["64007c196fbd729d9f22f19d", "64007c216fbd729d9f22f19f", "64007cdd6fbd729d9f22f1a8", "64007cd36fbd729d9f22f1a6", "64007cca6fbd729d9f22f1a4"],
         "createdBy": "64007c216fbd729d9f22f19f",
         "createdAt": "2023-02-02T10:36:09.606+00:00", 
         "updatedAt": "2023-02-02T10:36:09.606+00:00"
