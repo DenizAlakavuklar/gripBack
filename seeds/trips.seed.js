@@ -22,7 +22,7 @@ const tripsArr = [{
   "updatedAt": "2023-03-02T10:36:09.606+00:00"
   },
   {
-    "_id": "64007c198fbd729d9f22f19d",
+    "_id": "64007c198fbd739d9f22f19d",
     "tripName": "Girls trip in July",
     "image": "https://a.cdn-hotels.com/gdcs/production121/d841/5521ff65-1e9b-4b6a-a921-0a219a6f2637.jpg",
     "description": "Week somewhere warm where we can swim, eat, drink cocktails after bootcamp. Somewhere cheap because we are broke AF",
@@ -35,7 +35,7 @@ const tripsArr = [{
     "updatedAt": "2023-01-02T10:36:09.606+00:00"
     },
     {
-      "_id": "64007c198fbd729d9f22f19d",
+      "_id": "64007c198fbd72993f22f19d",
       "tripName": "Module 2 project celebration at Harry Potter World Japan",
       "image": "https://www.adventureswithfamily.com/wp-content/uploads/2018/02/The-Wizarding-World-of-Harry-Potter.png",
       "description": "WE LOVE HARRY POTTER SO MUCH, Let's go to Japan!",

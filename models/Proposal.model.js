@@ -40,10 +40,7 @@ const proposalSchema = new Schema(
       ref: Trip,
     }, 
 
-    votes: {
-      type: [Schema.Types.ObjectId],
-      ref: User,
-    },
+    votes: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }], 
 
     createdBy: {
       type: Schema.Types.ObjectId,
