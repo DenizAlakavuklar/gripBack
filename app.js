@@ -20,6 +20,10 @@ app.use('/api', indexRoutes)
 const authRoutes = require('./routes/auth.routes')
 app.use('/auth', authRoutes)
 
+//Adding the trips main route handler
+const tripRouter = require('./routes/trip.routes');
+app.use('/trip', tripRouter);
+
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require('./error-handling')(app)
 

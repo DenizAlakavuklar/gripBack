@@ -10,11 +10,19 @@ const userSchema = new Schema(
       lowercase: true,
       trim: true
     },
+
+    picture: {
+      type: String,
+      required: false,
+      default: "https://unsplash.com/photos/jzY0KRJopEI"
+    },
+
     passwordHash: {
       type: String,
       required: [true, 'Password is required.']
     }
   },
+  
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`    
     timestamps: true
@@ -24,3 +32,6 @@ const userSchema = new Schema(
 const User = model("User", userSchema);
 
 module.exports = User;
+
+
+

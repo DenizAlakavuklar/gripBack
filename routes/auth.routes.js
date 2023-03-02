@@ -36,7 +36,8 @@ router.post('/login', async (req, res, next) => {
             algorithm: 'HS256',
           }
         )
-        res.status(200).json({token: authToken});
+        console.log(foundUser)
+        res.status(200).json({token: authToken, userId: foundUser[0]._id});
       } else {
         res.status(403).json('Password incorrect')
       }
@@ -54,5 +55,22 @@ router.post('/verify', isAuthenticated, (req, res, next) => {
     res.json(req.payload.user);
   }
 })
+
+
+router.get('/user/:userId', isAuthenticated, async (req, res) => {
+  try {
+    const user = await User.findById(req.params.userId);
+    if (!user) {
+      res.status(404).json({ message: 'User not found' });
+      return;
+    }
+    res.status(200).json(user);
+  } catch (error) {
+    console.log('Error fetching user:', error);
+    res.status(500).json({ errorMessage: 'Error fetching user' });
+  }
+});
+
+
 
 module.exports = router
