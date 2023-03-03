@@ -73,6 +73,7 @@ router.post('/trips', async (req, res) => {
       // Delete one recipe
       await Trip.findByIdAndDelete(tripId)
       res.json({ message: 'Trip deleted properly' })
+      res.redirect('/trips/usertrips');
     } catch (error) {
       console.log(error)
     }
