@@ -19,25 +19,40 @@ router.post('/trips', async (req, res) => {
   
 // Endpoints for reading a trip
 
+    // All the trips created by all 
+      router.get('/trips/alltrips', async (req, res, next) => {
+          // Get all trips
+          const allTrips = await Trip.find()
+          res.json(allTrips)
+        });
 
-    router.get('/trips/alltrips', async (req, res, next) => {
-        // Get all trips
-        const allTrips = await Trip.find()
-        res.json(allTrips)
-      })
 
+    // A user's trips
+      router.get('/trips/usertrips/:userId', async (req, res, next) => {
+        try{  
+          const {userId} = req.params
+          console.log("Testing the userId queries:", req.params)
+          const userTrips = await Trip.find({ createdBy: userId })
+          res.status(200).json(userTrips);
+          } catch (error) {
+            console.error('Error fetching user trips:', error);
+            res.status(500).json({errorMessage:"Error fetching a user's trips data"});
+          }
+        });
+      
 
-      router.get('/trips/:tripId', async (req, res, next) => {
-        const { tripId } = req.params
-        try {
-          // Get one trip
-          const trip = await Trip.findById(tripId)
-          res.json(trip)
-        } catch (error) {
-          console.log(error)
+    // Only a specific trip
+        router.get('/trips/:tripId', async (req, res, next) => {
+          const { tripId } = req.params
+          try {
+            // Get one trip
+            const trip = await Trip.findById(tripId)
+            res.json(trip)
+          } catch (error) {
+            console.log(error)
+          }
         }
-      }
-    );
+      );
     
 
   //Updating a trip:

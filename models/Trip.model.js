@@ -28,7 +28,9 @@ const tripSchema = new Schema(
   dateDescription: String,
 
   attendees: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }], 
-  createdBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }
+
+  // Alexia: I've deleted the required: true below as it wasn't allowing me to create more trips:
+  createdBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true }
   
 },
 
