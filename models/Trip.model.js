@@ -20,7 +20,7 @@ const tripSchema = new Schema(
 
   budget: {
     type: String,
-    enum: ['budget', 'moderate', 'luxury']
+    // enum: ['budget', 'moderate', 'luxury']   --- This gives a validation error, so I have commented it out
   },
 
   location: [String],
