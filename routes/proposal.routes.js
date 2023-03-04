@@ -48,7 +48,7 @@ router.get('/:tripId', /* isAuthenticated, */ async (req, res, next) => {
         const { proposalId } = req.params
         const updateProposalData = req.body
         console.log(updateProposalData)
-        await Proposal.findByIdAndUpdate(proposalId, updateProposalData)
+        await Proposal.findOneAndUpdate(proposalId, updateProposalData)
         res.json({ message: 'Proposal sucessfully updated' })
       })
 
