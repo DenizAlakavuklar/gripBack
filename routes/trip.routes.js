@@ -78,11 +78,25 @@ router.post('/trips', async (req, res) => {
 
   //Updating a trip:
   router.put('/trips/:tripId', async (req, res) => {
-        const { tripId } = req.params
+       /*  
+       OLD CODE PRIOR TO ATTENDEES INPUT
+       
+       const { tripId } = req.params
         const updateTripData = req.body
         console.log(updateTripData)
         await Trip.findByIdAndUpdate(tripId, updateTripData)
         res.json({ message: 'Trip updated properly' })
+ */
+        const { tripId } = req.params
+        const updateTripData = req.body
+        let attendees = req.body.attendees.split(",")
+        console.log("attendees: ", attendees)
+        updateTripData.attendees = [updateTripData.attendees]
+        console.log(updateTripData)
+        //await Trip.findByIdAndUpdate(tripId, updateTripData)
+        await Trip.findByIdAndUpdate(tripId, {...updateTripData, attendees})
+        res.json({ message: 'Trip updated properly' })
+
       })
 
 
