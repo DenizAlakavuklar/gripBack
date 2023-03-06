@@ -11,8 +11,11 @@ router.get('/trips', (req, res, next) => {
 // router.post('/trips/new', async (req, res) => {
 router.post('/trips', async (req, res) => {
     const newTripData = req.body
+    let attendees = req.body.attendees.split(",")
+    console.log("attendees: ", attendees)
+    newTripData.attendees = [newTripData.attendees]
     console.log(newTripData)
-    const newTrip = await Trip.create(newTripData)
+    const newTrip = await Trip.create({...newTripData, attendees})
     res.status(201).json(newTrip)
   })
 
