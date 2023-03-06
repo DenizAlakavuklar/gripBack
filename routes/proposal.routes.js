@@ -34,7 +34,7 @@ router.get('/:tripId', /* isAuthenticated, */ async (req, res, next) => {
         const { tripId } = req.params
         try {
             // Get proposals
-            const proposal = await Proposal.find({trip: tripId})
+            const proposal = await Proposal.find({trip: tripId}).populate("createdBy").populate("votes")
             res.json(proposal)
         } catch (error) {
             console.log(error)

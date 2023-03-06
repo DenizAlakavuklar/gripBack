@@ -46,7 +46,7 @@ router.post('/trips', async (req, res) => {
           const { tripId } = req.params
           try {
             // Get one trip
-            const trip = await Trip.findById(tripId)
+            const trip = await Trip.findById(tripId).populate("createdBy").populate("attendees")
             res.json(trip)
           } catch (error) {
             console.log(error)
