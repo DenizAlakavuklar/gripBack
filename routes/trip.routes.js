@@ -31,15 +31,33 @@ router.post('/trips', async (req, res) => {
 
 
     // A user's trips
-      router.get('/trips/usertrips/:userId', async (req, res, next) => {
+    router.get('/trips/usertrips/:userId', async (req, res, next) => {
+      try{  
+        const {userId} = req.params
+        console.log("Testing the userId queries:", req.params)
+        const userTrips = await Trip.find({ createdBy: userId })
+        res.status(200).json(userTrips);
+        } catch (error) {
+          console.error('Error fetching user trips:', error);
+          res.status(500).json({errorMessage:"Error fetching a user's trips data"});
+        }
+      });
+
+      // User trips that aren't the theirs (they are marked as attendees)
+      router.get('/trips/usertrips/:userId/attendees', async (req, res, next) => {
         try{  
           const {userId} = req.params
-          console.log("Testing the userId queries:", req.params)
-          const userTrips = await Trip.find({ createdBy: userId })
-          res.status(200).json(userTrips);
+          // const userAttendeesTrips = await Trip.find($and:[{ attendees: userId }, {$ne: {'createdBy' : userId}}]).populate("createdBy").populate("attendees")
+          const userAttendeesTrips = await Trip.find({
+            $and: [
+               { 'createdBy': { $ne: userId } },
+               { attendees: userId }
+            ]
+         }).populate("createdBy").populate("attendees")
+          res.status(200).json(userAttendeesTrips);
           } catch (error) {
             console.error('Error fetching user trips:', error);
-            res.status(500).json({errorMessage:"Error fetching a user's trips data"});
+            res.status(500).json({errorMessage:"Error fetching a user's trips (Attendees) data"});
           }
         });
       

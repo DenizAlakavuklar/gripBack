@@ -91,6 +91,12 @@ router.get('/user/:userId', isAuthenticated, async (req, res) => {
   }
 });
 
+router.get('/allusers', async (req, res, next) => {
+  // Get all users
+  const allUsers = await User.find()
+  
+  res.json(allUsers)
+});
 
 
 module.exports = router
