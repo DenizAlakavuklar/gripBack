@@ -99,4 +99,12 @@ router.get('/allusers', async (req, res, next) => {
 });
 
 
+router.get('/newestusers', async (req, res, next) => {
+  // Get newest users
+  const newestUsers = await User.find().sort( { createdAt : -1} ).limit(33)
+
+  
+  res.json(newestUsers)
+});
+
 module.exports = router
