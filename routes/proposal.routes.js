@@ -20,7 +20,8 @@ router.get('/:tripId/:proposalId', /* isAuthenticated, */ async (req, res, next)
         const { proposalId } = req.params
         try {
             // Get proposals
-            const proposal = await Proposal.find({_id: proposalId})
+            const proposal = await Proposal.find({_id: proposalId}).populate("votes").populate("createdBy")
+            console.log("proposal=========>", proposal)
             res.json(proposal)
         } catch (error) {
             console.log(error)
@@ -34,7 +35,7 @@ router.get('/:tripId', /* isAuthenticated, */ async (req, res, next) => {
         const { tripId } = req.params
         try {
             // Get proposals
-            const proposal = await Proposal.find({trip: tripId}).populate("votes")
+            const proposal = await Proposal.find({trip: tripId}).populate("votes").populate("createdBy")
             res.json(proposal)
         } catch (error) {
             console.log(error)
@@ -49,7 +50,7 @@ router.get('/:tripId', /* isAuthenticated, */ async (req, res, next) => {
         const updateProposalData = req.body
         console.log(updateProposalData)
         console.log("req.params", req.params)
-        const updatedProposal = await Proposal.findByIdAndUpdate(proposalId, updateProposalData, {new:true})
+        const updatedProposal = await Proposal.findOneAndUpdate(proposalId, updateProposalData, {new:true})
         res.json({ message: 'Proposal sucessfully updated' , updatedProposal})
       })
 
