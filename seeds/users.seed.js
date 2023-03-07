@@ -67,7 +67,55 @@ const usersArr = [{
   "passwordHash": "$2a$13$a8SBMKSI936pAjNu97pAfOpLvgMya/9bj5BOQXXlmQRbgwBkSHObq",
   "createdAt": "2023-03-02T10:36:09.606+00:00", 
   "updatedAt": "2023-03-02T10:36:09.606+00:00"
-}]
+},{
+  "_id": "53007cdd6fbd749d9622f1a7",
+  "username": "kostas",
+  "email": "kostas@ironhack.com",
+  "picture": "https://ca.slack-edge.com/T04H61XFU3D-U04HTMQJ5M1-88e4cda046d2-512",
+  "passwordHash": "$2a$13$a8SBMKSI936pAjNu97pAfOpLvgMya/9bj5BOQXXlmQRbgwBkSHObq",
+  "createdAt": "2023-03-02T10:36:09.606+00:00", 
+  "updatedAt": "2023-03-02T10:36:09.606+00:00"
+},{
+  "_id": "29007cdd6fbd749d9622f1a9",
+  "username": "zsofia",
+  "email": "zsofia@ironhack.com",
+  "picture": "https://ca.slack-edge.com/T04H61XFU3D-U04HM1G87L1-e8cd870566bd-512",
+  "passwordHash": "$2a$13$a8SBMKSI936pAjNu97pAfOpLvgMya/9bj5BOQXXlmQRbgwBkSHObq",
+  "createdAt": "2023-03-02T10:36:09.606+00:00", 
+  "updatedAt": "2023-03-02T10:36:09.606+00:00"
+},{
+  "_id": "12307cdd6fbd749d9622f2b4",
+  "username": "istvan",
+  "email": "istvan@ironhack.com",
+  "picture": "https://ca.slack-edge.com/T04H61XFU3D-U04HTF5JM8E-3d4f2291fb0e-512",
+  "passwordHash": "$2a$13$a8SBMKSI936pAjNu97pAfOpLvgMya/9bj5BOQXXlmQRbgwBkSHObq",
+  "createdAt": "2023-03-02T10:36:09.606+00:00", 
+  "updatedAt": "2023-03-02T10:36:09.606+00:00"
+},{
+  "_id": "24607cdd6fbd222d9622e7b1",
+  "username": "charlie",
+  "email": "charlie@ironhack.com",
+  "picture": "https://ca.slack-edge.com/T04H61XFU3D-U04H7JG3D8B-d9a3c4713f66-512",
+  "passwordHash": "$2a$13$a8SBMKSI936pAjNu97pAfOpLvgMya/9bj5BOQXXlmQRbgwBkSHObq",
+  "createdAt": "2023-03-02T10:36:09.606+00:00", 
+  "updatedAt": "2023-03-02T10:36:09.606+00:00"
+},{
+  "_id": "33607cdd6fbd222d9622e7b1",
+  "username": "matan",
+  "email": "matan@ironhack.com",
+  "picture": "https://ca.slack-edge.com/T04H61XFU3D-U04H86S2EK1-5a4347873ccf-512",
+  "passwordHash": "$2a$13$a8SBMKSI936pAjNu97pAfOpLvgMya/9bj5BOQXXlmQRbgwBkSHObq",
+  "createdAt": "2023-03-02T10:36:09.606+00:00", 
+  "updatedAt": "2023-03-02T10:36:09.606+00:00"
+}/* ,{
+  "_id": "64007cdd6fbd749d9622f1a8",
+  "username": "",
+  "email": "@ironhack.com",
+  "picture": "",
+  "passwordHash": "$2a$13$a8SBMKSI936pAjNu97pAfOpLvgMya/9bj5BOQXXlmQRbgwBkSHObq",
+  "createdAt": "2023-03-02T10:36:09.606+00:00", 
+  "updatedAt": "2023-03-02T10:36:09.606+00:00"
+} */]
 
 mongoose
   .connect(MONGO_URI)

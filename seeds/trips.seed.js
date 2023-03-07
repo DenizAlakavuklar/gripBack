@@ -59,7 +59,48 @@ const tripsArr = [{
         "createdBy": "64007c216fbd729d9f22f19f",
         "createdAt": "2023-02-02T10:36:09.606+00:00", 
         "updatedAt": "2023-02-02T10:36:09.606+00:00"
-        }
+        },
+        {
+          "_id": "84007c198fcd729d9f22f198",
+          "tripName": "Surfing trip",
+          "image": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+          "description": "Surfing trip to get away from Ironhacker students. They've done my brain in!",
+          "budget": "budget",
+          "location": "Morroco",
+          "dateDescription": "Long weekend in March - Any weekend is fine!",
+          "attendees": ["64007cdd6fbd729d9f22f1a8", "64007cca6fbd729d9f22f1a4", "64007cd36fbd729d9f22f1a6"],
+          "createdBy": "64007cca6fbd729d9f22f1a4",
+          "createdAt": "2023-02-02T10:36:09.606+00:00", 
+          "updatedAt": "2023-02-02T10:36:09.606+00:00"
+          }
+          ,
+        {
+          "_id": "95977c198fcd729d9f22f198",
+          "tripName": "Hungarians trip",
+          "image": "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+          "description": "Mending our friendship",
+          "budget": "budget",
+          "location": "Europe somewhere",
+          "dateDescription": "May sometime for about a week",
+          "attendees": ["12307cdd6fbd749d9622f2b4", "29007cdd6fbd749d9622f1a9"],
+          "createdBy": "12307cdd6fbd749d9622f2b4",
+          "createdAt": "2023-02-02T10:36:09.606+00:00", 
+          "updatedAt": "2023-02-02T10:36:09.606+00:00"
+          },
+          {
+            "_id": "17977c198fcd729d9f22f110",
+            "tripName": "Berliner Ironhackers take South East Asia",
+            "image": "https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "description": "After Ironhack relaxation and partying",
+            "budget": "budget",
+            "location": "Thailand, maybe Laos",
+            "dateDescription": "May sometime for about a week",
+            "attendees": ["53007cdd6fbd749d9622f1a7", "64007c196fbd729d9f22f19d", "64007cdd6fbd749d9622f1a8", "29007cdd6fbd749d9622f1a9"],
+            "createdBy": "53007cdd6fbd749d9622f1a7",
+            "createdAt": "2023-02-02T10:36:09.606+00:00", 
+            "updatedAt": "2023-02-02T10:36:09.606+00:00"
+            }
+
   ]
 
   

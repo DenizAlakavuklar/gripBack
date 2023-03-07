@@ -38,7 +38,7 @@ const proposalsArr = [{
   "link": "https://www.airbnb.com/rooms/696787654491967485?adults=3&check_in=2023-07-25&check_out=2023-07-29&federated_search_id=85f0c4f5-8314-4438-8cf7-4e2a369399dc&source_impression_id=p3_1677757346_uGLnTT%2BaHfbCFC1U",
   "link2": "",
   "trip": "64007c198fbd729d9f22f19d",
-  "votes": ["64007cd36fbd729d9f22f1a6", "64007cd36fbd729d9f22f1a6"],
+  "votes": ["64007cd36fbd729d9f22f1a6"],
   "createdBy": "64007cd36fbd729d9f22f1a6",
   "createdAt": "2023-03-02T10:36:09.606+00:00", 
   "updatedAt": "2023-03-02T10:36:09.606+00:00"

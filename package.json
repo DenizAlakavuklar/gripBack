@@ -8,7 +8,7 @@
     "seed-trips": "node seeds/trips.seed.js",
     "seed-users": "node seeds/users.seed.js",
     "seed-proposals": "node seeds/proposals.seed.js",
-    "seed": "node seeds/proposals.seed.js && node seeds/users.seed.js && node seeds/trips.seed.js"
+    "seed": "node seeds/proposals.seed.js && node seeds/users.seed.js && node seeds/trips.seed.js && nodemon nodemon server.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
