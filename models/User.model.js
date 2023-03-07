@@ -22,7 +22,7 @@ const userSchema = new Schema(
     picture: {
       type: String,
       required: false,
-      default: "https://unsplash.com/photos/jzY0KRJopEI"
+      default: "https://ca.slack-edge.com/T04H61XFU3D-U04HWEYUS2U-g1fe52979b4d-512"
     },
 
     passwordHash: {
