@@ -78,6 +78,39 @@ const proposalsArr = [{
   "createdAt": "2023-03-02T10:36:09.606+00:00", 
   "updatedAt": "2023-03-02T10:36:09.606+00:00"
   }
+  , 
+  {
+    "_id": "64089c762b859d2c04aa0e4b",
+  "title": "Lovely family home in Graça",
+  "image": "https://a0.muscache.com/im/pictures/miso/Hosting-14817188/original/3d0c0a3a-fee7-4095-886d-ac6eea50a472.jpeg?im_w=1200",
+  "location": "Lisbon",
+  "type": "AirBnB", /* AirBnB, Camping, Crash at a friends, Hotel, Serviced Apartment */
+  "totalPrice": 180,
+  "nights": 14,
+  "link": "https://www.airbnb.com/rooms/14817188?adults=3&check_in=2023-07-16&check_out=2023-07-30&federated_search_id=ef178678-dc5d-48f0-bde7-33e59d0bb04d&source_impression_id=p3_1678285808_GC8LTMpQ%2BGP2MB9v",
+  "link2": "",
+  "trip": "64007c198fbd739d9f22f19d",
+  "votes": ["64007c216fbd729d9f22f19f", "64007c456fbd729d9f22f1a2"],
+  "createdBy": "64007c216fbd729d9f22f19f",
+  "createdAt": "2023-03-02T10:36:09.606+00:00", 
+  "updatedAt": "2023-03-02T10:36:09.606+00:00"
+  } , 
+  {
+    "_id": "64089c1dfaddd9df7da06b12",
+  "title": "River View Lisbon’s New Apartment",
+  "image": "https://a0.muscache.com/im/pictures/miso/Hosting-548690351123400087/original/ed07e02f-0107-41f3-aca2-99ead4e27b25.jpeg?im_w=1200",
+  "location": "Lisbon",
+  "type": "AirBnB", /* AirBnB, Camping, Crash at a friends, Hotel, Serviced Apartment */
+  "totalPrice": 208,
+  "nights": 14,
+  "link": "https://www.airbnb.com/rooms/548690351123400087?adults=3&check_in=2023-07-16&check_out=2023-07-30&federated_search_id=ef178678-dc5d-48f0-bde7-33e59d0bb04d&source_impression_id=p3_1678285809_tbV5kiwK209wrsL6",
+  "link2": "",
+  "trip": "64007c198fbd739d9f22f19d",
+  "votes": ["64007c216fbd729d9f22f19f", "64007c196fbd729d9f22f19d"],
+  "createdBy": "64007c196fbd729d9f22f19d",
+  "createdAt": "2023-03-02T10:36:09.606+00:00", 
+  "updatedAt": "2023-03-02T10:36:09.606+00:00"
+  }
 
   /*HARRY POTTER WORLD*/
   , 
