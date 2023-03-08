@@ -24,7 +24,7 @@ const tripsArr = [{
   {
     "_id": "64007c198fbd739d9f22f19d",
     "tripName": "Girls trip in July",
-    "image": "https://a.cdn-hotels.com/gdcs/production121/d841/5521ff65-1e9b-4b6a-a921-0a219a6f2637.jpg",
+    "image": "https://images.unsplash.com/photo-1602088113235-229c19758e9f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80",
     "description": "Week somewhere warm where we can swim, eat, drink cocktails after bootcamp. Somewhere cheap because we are broke AF",
     "budget": "budget",
     "location": "Portugal, Greece, Italy, ????",
@@ -37,7 +37,7 @@ const tripsArr = [{
     {
       "_id": "64007c198fbd72993f22f19d",
       "tripName": "Module 2 project celebration at Harry Potter World Japan",
-      "image": "https://www.adventureswithfamily.com/wp-content/uploads/2018/02/The-Wizarding-World-of-Harry-Potter.png",
+      "image": "https://images.unsplash.com/photo-1583997052301-0042b33fc598?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
       "description": "WE LOVE HARRY POTTER SO MUCH, Let's go to Japan!",
       "budget": "budget",
       "location": "Tokyo",
@@ -50,7 +50,7 @@ const tripsArr = [{
       {
         "_id": "74007c198fbd729d9f22f198",
         "tripName": "Port Wine tasting long weekend!",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_Sdtad0mRE09pRHhZNQ3ckMFyhW1fl7lfxA&usqp=CAU",
+        "image": "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
         "description": "Need to relax and drink Port Wine in PORTO!",
         "budget": "budget",
         "location": "Porto",
