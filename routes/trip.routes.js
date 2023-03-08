@@ -60,6 +60,19 @@ router.post('/trips', async (req, res) => {
             res.status(500).json({errorMessage:"Error fetching a user's trips (Attendees) data"});
           }
         });
+
+
+        // User trips that they are marked as attendees
+      router.get('/trips/usertrips/:userId/attendeesAll', async (req, res, next) => {
+        try{  
+          const {userId} = req.params
+          const userAttendeesTrips = await Trip.find({ attendees: userId}).populate("createdBy").populate("attendees")
+          res.status(200).json(userAttendeesTrips);
+          } catch (error) {
+            console.error('Error fetching user trips:', error);
+            res.status(500).json({errorMessage:"Error fetching a user's trips (Attendees) data"});
+          }
+        });
       
 
     // Only a specific trip
