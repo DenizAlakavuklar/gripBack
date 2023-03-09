@@ -30,12 +30,21 @@ if (!passwordRegex.test(req.body.password)) {
   res.status(400).json({ message: 'Password must have at least 4 characters and contain letters or numbers.' });
   return;
 }
+// Check if the user already exists in the database
+const foundUser = await User.findOne({emailRegex})
+  if (foundUser) {
+    res.status(400).json({ message: "User already exists." });
+    return;
+  }
+
     await User.create({ username: username, email: email, passwordHash: passwordHash });
     res.status(201).json({ message: "User created successfully" });
   } catch (error) {
     console.log("Error signing up: ", error);
     res.status(400).json({ errorMessage: "Error signing up" });
   }
+
+
 })
 
 router.post('/login', async (req, res, next) => {
@@ -59,10 +68,10 @@ router.post('/login', async (req, res, next) => {
         console.log(foundUser)
         res.status(200).json({ token: authToken, userId: foundUser[0]._id });
       } else {
-        res.status(403).json('Password incorrect')
+        res.status(403).json({ message:'Password incorrect'})
       }
     } else {
-      res.status(404).json('User not found')
+      res.status(404).json({ message:'User not found'})
     }
   } catch (error) {
     console.log("Error finding user: ", error);
