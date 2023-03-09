@@ -1,3 +1,6 @@
+[![image](https://user-images.githubusercontent.com/120404332/224099908-0755a7c9-cb56-4461-8ba4-fd6630401f5e.png)](https://stellular-kulfi-5ab68f.netlify.app)
+
+
 # Project's name
 GRIP
 
@@ -46,11 +49,12 @@ There are four type of routes;
 
 ## Links
 
-- [Github repository Link for Front-end] https://github.com/DenizAlakavuklar/gripFront
-- [Github repository Link for Back-end] https://github.com/DenizAlakavuklar/gripBack
+- [Github repository Link for Front-end](https://github.com/DenizAlakavuklar/gripFront)
 
-- [Deployment Link for Front-end] https://stellular-kulfi-5ab68f.netlify.app
-- [Deployment Link for Back-end] https://grip.adaptable.app
+- [Github repository Link for Back-end](https://github.com/DenizAlakavuklar/gripBack)
 
-- [Trello Link] https://trello.com/b/Zfucoddl/kanban-template
-- [Slides Link] https://www.canva.com/design/DAFcs0wjzg0/gPO1Qfm16ebvpfAppLSslQ/edit?utm_content=DAFcs0wjzg0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+- [Deployment Link for Front-end](https://stellular-kulfi-5ab68f.netlify.app)
+- [Deployment Link for Back-end](https://grip.adaptable.app)
+
+- [Trello Link](https://trello.com/b/Zfucoddl/kanban-template)
+- [Slides Link](https://www.canva.com/design/DAFcs0wjzg0/gPO1Qfm16ebvpfAppLSslQ/edit?utm_content=DAFcs0wjzg0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
