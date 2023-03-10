@@ -6,12 +6,25 @@ const isAuthenticated = require('../middlewares/isAuthenticated');
 
 
 router.post('/signup', async (req, res, next) => {
+     
   try {
 
     const username = req.body.username;
     const email = req.body.email;
     const salt = bcrypt.genSaltSync(13);
     const passwordHash = bcrypt.hashSync(req.body.password, salt);
+
+    try { 
+      // Check if the user already exists in the database
+const foundUser = await User.find({username: username}) 
+        if (foundUser.length) {
+            res.status(400).json({message: "User already exists."})
+            return;}
+        }
+        catch (error) {
+          console.log(error);
+          return;
+      }
 
     // Check if the email or password or name is provided as an empty string 
     if (email === '' || passwordHash === '' || username === '') {
@@ -30,11 +43,6 @@ if (!passwordRegex.test(req.body.password)) {
   res.status(400).json({ message: 'Password must have at least 4 characters and contain letters or numbers.' });
   return;
 }
-// Check if the user already exists in the database
-const foundUser = await User.find({username: username}) 
-        if (foundUser.length) {
-            res.status(400).json({message: "User already exists."})
-            return;}
 
     await User.create({ username: username, email: email, passwordHash: passwordHash });
     res.status(201).json({ message: "User created successfully" });
