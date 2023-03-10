@@ -31,15 +31,16 @@ if (!passwordRegex.test(req.body.password)) {
   return;
 }
 // Check if the user already exists in the database
-const foundUser = await User.findOne({email})
-  if (foundUser) {
-    res.status(400).json({ message: "User already exists." });
-    return;
-  }
+const foundUser = await User.find({username: username}) 
+        if (foundUser.length) {
+            res.status(400).json({message: "User already exists."})
+            return;}
 
     await User.create({ username: username, email: email, passwordHash: passwordHash });
     res.status(201).json({ message: "User created successfully" });
-  } catch (error) {
+  } 
+  
+  catch (error) {
     console.log("Error signing up: ", error);
     res.status(400).json({ errorMessage: "Error signing up" });
   }
